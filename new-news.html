@@ -1,0 +1,16 @@
+---
+layout: news
+---
+
+<h1>New News</h1>
+
+<ul>
+    {% for news in site.categories.new-news limit: 3%}
+    <li>
+        <a href="{{site.baseurl}}{{page.url}}">{{news.title}}</a>
+        <p>
+            {{news.meta}}
+        </p>
+    </li>
+    {% endfor%}
+</ul>
